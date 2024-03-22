@@ -3,7 +3,6 @@
     "browserify-fs": "^1.0.0",
     "crypto-browserify": "^3.12.0",
     "node-polyfill-webpack-plugin": "^3.0.0",
-    "nvm": "^0.0.4",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -12,17 +11,22 @@
   },
   "scripts": {
     "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
-    "babel-loader": "^9.1.3",
+    "babel-loader": "^8.3.0",
+    "gh-pages": "^6.1.1",
+    "level-blobs": "^0.1.7",
     "prettier": "3.2.5",
+    "source-map-loader": "^3.0.0",
     "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
-    "source-map-loader": "^1.0.0"
-  }
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.4.0"
+  },
+  "homepage": "https://zharovskyi.github.io/react_webpack_27_03/"
 }

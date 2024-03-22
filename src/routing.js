@@ -15,11 +15,11 @@ const Routing = ({ metaData, setMetaData }) => {
         element={<Home metaData={metaData} setMetaData={setMetaData} />}
       />
       <Route
-        path="/posts/"
+        path="/posts"
         element={<Posts metaData={metaData} setMetaData={setMetaData} />}
       />
       <Route
-        path="posts/:id"
+        path="/posts/:id"
         element={
           <Post
             metaData={metaData}
@@ -29,11 +29,11 @@ const Routing = ({ metaData, setMetaData }) => {
         }
       />
       <Route
-        path="/albums/"
+        path="/albums"
         element={<Albums metaData={metaData} setMetaData={setMetaData} />}
       />
       <Route
-        path="albums/:id"
+        path="/albums/:id"
         element={
           <Post
             metaData={metaData}
@@ -42,7 +42,7 @@ const Routing = ({ metaData, setMetaData }) => {
           />
         }
       />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 };
